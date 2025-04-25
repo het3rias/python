@@ -1,0 +1,6 @@
+clave=3344
+contraseña=int(input("ingrese su contraseña"))
+
+while clave!=contraseña:
+    print("ERROR;clave invalida")
+    contraseña=int(input("ingrese su contraseña"))
