@@ -127,20 +127,33 @@
 
 #street figther
 #peleas por turno daño entre 2 y 10
-import random
+# import random
 
 # randy=random.randint(1,10)
 
 # print(randy)
-turno=random.randint(1,2)
+# import random
+# turno=random.randint(1,2)
 
-combatientes=str
-vida1=50
-vida2=50
+# vida1=50
+# vida2=50
+# combat1=str(input("ingrese su nombre:"))
+# combat2=str(input("ingrese su nombre:"))
 
-while vida1==0 or vida2==0:
-    daño=random.randint(2,10)
-    
+# while vida1>=0 or vida2>=0:
+#     daño=random.randint(2,10)
+#     if turno % 2==0:   
+#         print("turno de ",combat1)
+#         vida2-=daño
+#         print(f"vida {vida1} de:{combat1} ")
+#         print("daño ",daño)
+#     else:
+#         print("turno de ",combat2)
+#         vida1-=daño
+#         print(f"vida {vida2} de:{combat2} ")
+#         print("daño ",daño)
+#     turno+=1
+
 
 
 
