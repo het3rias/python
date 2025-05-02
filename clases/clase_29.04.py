@@ -22,8 +22,8 @@
 #         print(i)
 #malo
 
-num=int(input("ingrese un numero"))
-if num%2==0:
+# num=int(input("ingrese un numero"))
+# if num%2==0:
 
 #2
 # num=0

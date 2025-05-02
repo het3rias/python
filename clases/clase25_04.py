@@ -58,7 +58,7 @@
 #     if intentos==1:
 #         break
 #     intentos-=1
-#     print(f"quedan {intentos} 3intentos")
+#     print(f"quedan {intentos} intentos")
 # if clave==contraseña:
 #     print("clave aceptada\nbienvenido ")
 # else:
