@@ -89,30 +89,231 @@
 # print("el total del descuento es",descuento)
 # print("el total a pagar es ", arancel)
 
-clave1=1111
-clave2=2222
-clave3=3333
+# clave1=1111
+# clave2=2222
+# clave3=3333
+# retiro=0
 
-contraseña=0
-
-bille5000=30
-bille10000=30
-bille20000=30
-
-print('''
-    1.-user 1
-    2.-user 2
-    3.-user 3
-      ''')
-
-op=int(input("ingrese usuario"))
-
-if op==1:
-    contraseña()
-    while clave1!=contraseña:
-        print("ingreso user 1")
+# op=0
+# op2=0
+# bille5000=30
+# bille10000=30
+# bille20000=30
 
 
 
 
+# while op!=4:
+#     op2=0
+    
+#     if op==1:
+#         bille5000=30
+#         bille10000=30
+#         bille20000=30
+#         contraseña=int(input("ingrese contraseña"))
+#         while clave1!=contraseña:
+#             print("contraeña invalida; intente nuevamente")
+#             contraseña=int(input("ingrese contraseña"))
+#         while op2!=4:     
+#             print(f'''
+#             billetes disponibles (para retirar marcar numero del billete)
+#             1.-$5000 = {bille5000}
+#             2.-$10000 = {bille10000}
+#             3.-$20000 = {bille20000}
+#             4.-salir
+#             opciones de retiro
+            
+#               ''')
+#             op2=int(input("ingrese opcion:"))
+#             if op2==1:
+#                 retiro=int(input("ingresar numero de billetes a retirar "))
+#                 if bille5000>=retiro:
+#                     bille5000-=retiro
+#                     print(f"usted retiro {retiro} billetes de $5000 ")
+#                 else:
+#                     print("saldo no disponible")
+                
+#             elif op2==2:
+#                 retiro=int(input("ingresar numero de billetes a retirar "))
+#                 if bille10000>=retiro:
+#                     bille10000-=retiro
+#                     print(f"usted retiro {retiro} billetes de 10000 ")
+#                 else:
+#                     print("saldo no disponible")
+#             elif op2==3:
+#                 retiro=int(input("ingresar numero de billetes a retirar "))
+#                 if bille20000>=retiro:
+#                     bille20000-=retiro
+#                     print(f"usted retiro {retiro} billetes de $20000 ")
+#                 else:
+#                     print("saldo no disponible")
+#             elif op2==4:
+#                 print("saliendo...")
+#     elif op==2:
+#         bille5000=30
+#         bille10000=30
+#         bille20000=30
+#         contraseña=int(input("ingrese contraseña"))
+#         while clave2!=contraseña:
+#             print("contraeña invalida; intente nuevamente")
+#             contraseña=int(input("ingrese contraseña"))
+#         while op2!=4:     
+#             print(f'''
+#             billetes disponibles (para retirar marcar numero del billete)
+#             1.-$5000 = {bille5000}
+#             2.-$10000 = {bille10000}
+#             3.-$20000 = {bille20000}
+#             4.-salir
+#             opciones de retiro
+            
+#               ''')
+#             op2=int(input("ingrese opcion:"))
+#             if op2==1:
+#                 retiro=int(input("ingresar numero de billetes a retirar "))
+#                 if bille5000>=retiro:
+#                     bille5000-=retiro
+#                     print(f"usted retiro {retiro} billetes de $5000 ")
+#                 else:
+#                     print("saldo no disponible")
+                
+#             elif op2==2:
+#                 retiro=int(input("ingresar numero de billetes a retirar "))
+#                 if bille10000>=retiro:
+#                     bille10000-=retiro
+#                     print(f"usted retiro {retiro} billetes de $10000 ")
+#                 else:
+#                     print("saldo no disponible")
+#             elif op2==3:
+#                 retiro=int(input("ingresar numero de billetes a retirar "))
+#                 if bille20000>=retiro:
+#                     bille20000-=retiro
+#                     print(f"usted retiro {retiro} billetes de $20000 ")
+#                 else:
+#                     print("saldo no disponible")
+#             elif op2==4:
+#                 print("saliendo...")   
+#     elif op==3:
+#         bille5000=30
+#         bille10000=30
+#         bille20000=30
+#         contraseña=int(input("ingrese contraseña"))
+#         while clave3!=contraseña:
+#             print("contraeña invalida; intente nuevamente")
+#             contraseña=int(input("ingrese contraseña"))
+#         while op2!=4:     
+#             print(f'''
+#             billetes disponibles (para retirar marcar numero del billete)
+#             1.-$5000 = {bille5000}
+#             2.-$10000 = {bille10000}
+#             3.-$20000 = {bille20000}
+#             4.-salir
+#             opciones de retiro
+            
+#               ''')
+#             op2=int(input("ingrese opcion:"))
+#             if op2==1:
+#                 retiro=int(input("ingresar numero de billetes a retirar "))
+#                 if bille5000>=retiro:
+#                     bille5000-=retiro
+#                     print(f"usted retiro {retiro} billetes de $5000 ")
+#                 else:
+#                     print("saldo no disponible")
+                
+#             elif op2==2:
+#                 retiro=int(input("ingresar numero de billetes a retirar "))
+#                 if bille10000>=retiro:
+#                     bille10000-=retiro
+#                     print(f"usted retiro {retiro} billetes de $10000 ")
+#                 else:
+#                     print("saldo no disponible")
+#             elif op2==3:
+#                 retiro=int(input("ingresar numero de billetes a retirar "))
+#                 if bille20000>=retiro:
+#                     bille20000-=retiro
+#                     print(f"usted retiro {retiro} billetes de $20000 ")
+#                 else:
+#                     print("saldo no disponible")
+#             elif op2==4:
+#                 print("saliendo...")
+#     elif op==4:
+#         print("saliendo del cajero...")
+#     print('''
+#     1.-user 1
+#     2.-user 2
+#     3.-user 3
+#     4.-salir
+#       ''')
+#     op=int(input("ingrese opcion:"))
 
+# Contraseñas
+# claves = {
+#     1: 1111,
+#     2: 2222,
+#     3: 3333
+# }
+
+# # Cantidad de billetes (iniciales)
+# bille5000 = 30
+# bille10000 = 30
+# bille20000 = 30
+
+# def menu_retiro():
+#     global bille5000, bille10000, bille20000
+#     op2 = 0
+#     while op2 != 4:
+#         print(f'''
+#         Billetes disponibles (para retirar marque el número del billete):
+#         1.- $5000   = {bille5000}
+#         2.- $10000  = {bille10000}
+#         3.- $20000  = {bille20000}
+#         4.- Salir
+#         ''')
+#         op2 = int(input("Ingrese opción: "))
+#         if op2 == 1:
+#             retiro = int(input("Ingrese número de billetes a retirar: "))
+#             if bille5000 >= retiro:
+#                 bille5000 -= retiro
+#                 print(f"Usted retiró {retiro} billetes de $5000")
+#             else:
+#                 print("Saldo no disponible")
+#         elif op2 == 2:
+#             retiro = int(input("Ingrese número de billetes a retirar: "))
+#             if bille10000 >= retiro:
+#                 bille10000 -= retiro
+#                 print(f"Usted retiró {retiro} billetes de $10000")
+#             else:
+#                 print("Saldo no disponible")
+#         elif op2 == 3:
+#             retiro = int(input("Ingrese número de billetes a retirar: "))
+#             if bille20000 >= retiro:
+#                 bille20000 -= retiro
+#                 print(f"Usted retiró {retiro} billetes de $20000")
+#             else:
+#                 print("Saldo no disponible")
+#         elif op2 == 4:
+#             print("Saliendo del menú de retiro...")
+#         else:
+#             print("Opción inválida")
+
+# # Menú principal
+# op = 0
+# while op != 4:
+#     print('''
+#     === MENÚ PRINCIPAL ===
+#     1.- Usuario 1
+#     2.- Usuario 2
+#     3.- Usuario 3
+#     4.- Salir
+#     ''')
+#     op = int(input("Ingrese opción: "))
+
+#     if op in [1, 2, 3]:
+#         contraseña = int(input("Ingrese contraseña: "))
+#         while contraseña != claves[op]:
+#             print("Contraseña inválida; intente nuevamente.")
+#             contraseña = int(input("Ingrese contraseña: "))
+#         menu_retiro()
+#     elif op == 4:
+#         print("Saliendo del cajero...")
+#     else:
+#         print("Opción inválida")
