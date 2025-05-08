@@ -245,14 +245,14 @@
 #       ''')
 #     op=int(input("ingrese opcion:"))
 
-# Contraseñas
+
 # claves = {
 #     1: 1111,
 #     2: 2222,
 #     3: 3333
 # }
 
-# # Cantidad de billetes (iniciales)
+
 # bille5000 = 30
 # bille10000 = 30
 # bille20000 = 30
@@ -295,7 +295,7 @@
 #         else:
 #             print("Opción inválida")
 
-# # Menú principal
+
 # op = 0
 # while op != 4:
 #     print('''
