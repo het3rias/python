@@ -21,31 +21,35 @@ def division():
         print("Se produjo un error")
 def calcu():
     while True:
-        op=int(input(''' seleccione su opcion
-                1.-Suma
-                2.-Resta
-                3.-Multiplicacion
-                4.-Division
-                5.-Salir        
-                '''))
-        match op:
-            case 1:
-                print("Suma")
-                suma()
-            case 2:  
-                print("Resta")
-                resta()
-            case 3:    
-                print("Multiplicacion")
-                multiplicacion()
-            case 4:    
-                print("division")
-                division()
-            case 5:
-                print("Saliendo...")
-                break
-            case _:
-                print("Opcion invalida")     
+        try:
+
+            op=int(input(''' seleccione su opcion
+                    1.-Suma
+                    2.-Resta
+                    3.-Multiplicacion
+                    4.-Division
+                    5.-Salir        
+                    '''))
+            match op:
+                case 1:
+                    print("Suma")
+                    suma()
+                case 2:  
+                    print("Resta")
+                    resta()
+                case 3:    
+                    print("Multiplicacion")
+                    multiplicacion()
+                case 4:    
+                    print("division")
+                    division()
+                case 5:
+                    print("Saliendo...")
+                    break
+                case _:
+                    print("Opcion invalida")    
+        except Exception:
+            print("solo numeros enteros son permitidos")    
        
 # _(funciona por si el usuario pone otro numero )
 
