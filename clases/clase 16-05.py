@@ -93,14 +93,26 @@
 
 def alumnos():
     global alumno,cantidadn,notas,promedio,prom,suma_promedios,promedio_curso
-
-    alumno=int(input("ingresar numero de alumnos:"))
-    suma_promedios = 0 
+    
+    try:
+        alumno=int(input("ingresar numero de alumnos:"))
+        
+    except ValueError:
+        print("ingrese solo numeros enteros ")
+        return
+    suma_promedios = 0    
     for i in range(alumno):
-        cantidadn=int(input(f"ingresar cantidad de notas del alumno {i+1}:"))
-        prom=0
+        try:
+            cantidadn=int(input(f"ingresar cantidad de notas del alumno {i+1}:"))
+            
+        except Exception:
+            print("ingrese solo numeros enteros")
+        prom=0    
         for e in range(cantidadn):
-            notas=int(input(f"ingresar nota {e+1} de alumno {i+1}:"))
+            try:
+                notas=int(input(f"ingresar nota {e+1} de alumno {i+1}:"))
+            except Exception:
+                print("ingrese solo numeros enteros ")
             prom+=notas
             promedio=prom/cantidadn
             promedio=round(promedio,2)
@@ -113,4 +125,47 @@ def alumnos():
     promedio_curso=round(suma_promedios/alumno,2)
     print(f"\n--- Promedio general del curso: {promedio_curso} ---")
     
-alumnos()
+# alumnos()
+# def alumnos():
+#     try:
+#         num_alumnos = int(input("Ingresar número de alumnos: "))
+#     except ValueError:
+#         print("❌ Ingrese solo números enteros.")
+#         return
+
+#     suma_promedios = 0
+
+#     for i in range(num_alumnos):
+#         while True:
+#             try:
+#                 cantidad_notas = int(input(f"Ingresar cantidad de notas del alumno {i+1}: "))
+#                 if cantidad_notas <= 0:
+#                     print("❌ La cantidad de notas debe ser mayor que cero.")
+#                     continue
+#                 break
+#             except ValueError:
+#                 print("❌ Ingrese solo números enteros.")
+
+#         suma_notas = 0
+#         for j in range(cantidad_notas):
+#             while True:
+#                 try:
+#                     nota = float(input(f"Ingresar nota {j+1} del alumno {i+1}: "))
+#                     if nota < 1.0 or nota > 7.0:
+#                         print("❌ La nota debe estar entre 1.0 y 7.0.")
+#                         continue
+#                     break
+#                 except ValueError:
+#                     print("❌ Ingrese un número válido (puede tener decimales).")
+#             suma_notas += nota
+
+#         promedio = round(suma_notas / cantidad_notas, 2)
+#         suma_promedios += promedio
+
+#         estado = "Aprobaste" if promedio >= 4.0 else "Reprobaste"
+#         print(f"{estado} con promedio {promedio}")
+
+#     promedio_curso = round(suma_promedios / num_alumnos, 2)
+#     print(f"\n--- Promedio general del curso: {promedio_curso} ---")
+    
+# alumnos()    
