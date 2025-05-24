@@ -91,51 +91,57 @@
 # menu()        
 
 
-def alumnos():
-    global alumno,cantidadn,notas,promedio,prom,suma_promedios,promedio_curso
+# def alumnos():
+#     global alumno,cantidadn,notas,promedio,prom,suma_promedios,promedio_curso
     
-    try:
-        alumno=int(input("ingresar numero de alumnos:"))
+#     try:
+#         alumno=int(input("ingresar numero de alumnos:"))
         
-    except ValueError:
-        print("ingrese solo numeros enteros ")
-        return
-    suma_promedios = 0    
-    for i in range(alumno):
-        try:
-            cantidadn=int(input(f"ingresar cantidad de notas del alumno {i+1}:"))
+#     except ValueError:
+#         print("ingrese solo numeros enteros ")
+#         return
+#     suma_promedios = 0    
+#     for i in range(alumno):
+#         try:
+#             cantidadn=int(input(f"ingresar cantidad de notas del alumno {i+1}:"))
             
-        except Exception:
-            print("ingrese solo numeros enteros")
-        prom=0    
-        for e in range(cantidadn):
-            try:
-                notas=int(input(f"ingresar nota {e+1} de alumno {i+1}:"))
-            except Exception:
-                print("ingrese solo numeros enteros ")
-            prom+=notas
-            promedio=prom/cantidadn
-            promedio=round(promedio,2)
-        suma_promedios +=promedio
-        if promedio>=4.0:
-            print(f"aprobaste con {promedio}")
-        else:
-            print(f"reprobaste con {promedio} ")
+#         except Exception:
+#             print("ingrese solo numeros enteros")
+#         prom=0    
+#         for e in range(cantidadn):
+#             try:
+#                 notas=int(input(f"ingresar nota {e+1} de alumno {i+1}:"))
+#             except Exception:
+#                 print("ingrese solo numeros enteros ")
+#             prom+=notas
+#             promedio=prom/cantidadn
+#             promedio=round(promedio,2)
+#         suma_promedios +=promedio
+#         if promedio>=4.0:
+#             print(f"aprobaste con {promedio}")
+#         else:
+#             print(f"reprobaste con {promedio} ")
         
-    promedio_curso=round(suma_promedios/alumno,2)
-    print(f"\n--- Promedio general del curso: {promedio_curso} ---")
+#     promedio_curso=round(suma_promedios/alumno,2)
+#     print(f"\n--- Promedio general del curso: {promedio_curso} ---")
     
 # alumnos()
 # def alumnos():
-#     try:
-#         num_alumnos = int(input("Ingresar número de alumnos: "))
-#     except ValueError:
-#         print("❌ Ingrese solo números enteros.")
-#         return
+#     while True:
+#         try:
+#             num_alumnos = int(input("Ingresar número de alumnos: "))
+#             if num_alumnos <= 0:
+#                 print("❌ El número de alumnos debe ser mayor que cero.")
+#                 continue
+#             break
+#         except ValueError:
+#             print("❌ Ingrese solo números enteros.")
 
 #     suma_promedios = 0
 
 #     for i in range(num_alumnos):
+#         print(f"\n--- Alumno {i+1} ---")
+        
 #         while True:
 #             try:
 #                 cantidad_notas = int(input(f"Ingresar cantidad de notas del alumno {i+1}: "))
@@ -156,16 +162,18 @@ def alumnos():
 #                         continue
 #                     break
 #                 except ValueError:
-#                     print("❌ Ingrese un número válido (puede tener decimales).")
+#                     print("❌ Ingrese una nota válida (puede tener decimales).")
 #             suma_notas += nota
 
 #         promedio = round(suma_notas / cantidad_notas, 2)
 #         suma_promedios += promedio
 
-#         estado = "Aprobaste" if promedio >= 4.0 else "Reprobaste"
-#         print(f"{estado} con promedio {promedio}")
+#         if promedio >= 4.0:
+#             print(f"✅ Aprobaste con promedio {promedio}")
+#         else:
+#             print(f"❌ Reprobaste con promedio {promedio}")
 
 #     promedio_curso = round(suma_promedios / num_alumnos, 2)
-#     print(f"\n--- Promedio general del curso: {promedio_curso} ---")
+#     print(f"\n🎓 Promedio general del curso: {promedio_curso}")
     
 # alumnos()    
