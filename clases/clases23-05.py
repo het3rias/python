@@ -96,10 +96,225 @@
 #     except Exception:
 #         print("ingrese solo numeros enteros que salgan en el menu")    
 
+# mio 
+# pago=0
+# total=0
+# deuda=100000
+# def PagoCupo():
+#     global deuda,pago
+#     try:
+#         pago=int(input("ingrese un monto a pagar:"))
+#         if pago >= 0:
+#             print("monto exitoso")
+#             if pago<=deuda:
+#                 print("monto adecuado")
+#                 deuda-=pago
+#                 saldo+=pago
+#                 print(f"pago exitoso deuda restante ${deuda} ")
+#             else:
+#                 print(f"el monto no debe superar el saldo actual ${deuda}")
+#         else:
+#             print("debe ser mayor o igual a cero")        
+#     except Exception:
+#         print("debe ingresar solo numeros enteros")
+# def SimulacionDeCompra():
+#     global deuda,total,pago
+    
+#     try:
+#         compras_a_realizar=int(input("ingrese cuantas compras realizara:"))
+#         for i in range(compras_a_realizar):
+#             monto=int(input("ingrese el monto de la compra:"))
+#             if monto>=0:
+#                 total+=monto
+#                 saldo=pago-monto
+#             else:
+#                 print("el monto debe ser mayor o igual a cero")
+            
+#             print(f"el saldo de la tarjeta es ${saldo}")
+#     except Exception:
+#         print("debe ingresar solo numeros enteros")
 
-deuda=100000
-def PagoCupo():
+# while True:
+#     try:
+#         op=int(input('''
+#         1. Pago de tarjeta de credito
+#         2. Simulación de compras
+#         3. salir 
+#                     '''))
+#         match op:
+#             case 1:
+#                 PagoCupo()
+#             case 2:
+#                 SimulacionDeCompra()
+#             case 3:
+#                 print("saliendo...")
+#                 break
+#             case _:
+#                 print("opcion invalida, debe ingresar solo opciones que esten en el menu")
+#     except Exception:
+#         print("debe ingresar solo numeros enteros")
 
-    pago=int(input("ingrese un monto a pagar(debe ser mayor o igual a cero)"))
-    if pago >= 0:
+#coregido suspuestamente 
+# deuda = 100000  # Deuda inicial
+# total = 0       # Total gastado
 
+# def PagoCupo():
+#     global deuda
+#     try:
+#         pago = int(input("Ingrese un monto a pagar: "))
+#         if pago < 0:
+#             print("❌ El monto debe ser mayor o igual a cero.")
+#         elif pago > deuda:
+#             print(f"❌ El monto no debe superar la deuda actual (${deuda}).")
+#         else:
+#             deuda -= pago
+#             print(f"✅ Pago exitoso. Deuda restante: ${deuda}")
+#     except ValueError:
+#         print("❌ Debe ingresar solo números enteros.")
+
+# def SimulacionDeCompra():
+#     global deuda, total
+#     try:
+#         compras_a_realizar = int(input("Ingrese cuántas compras realizará: "))
+#         for i in range(compras_a_realizar):
+#             monto = int(input(f"Ingrese el monto de la compra #{i+1}: "))
+#             if monto < 0:
+#                 print("❌ El monto debe ser mayor o igual a cero.")
+#                 continue
+#             if monto > deuda:
+#                 print(f"❌ Saldo insuficiente. Deuda restante: ${deuda}")
+#                 continue
+#             deuda -= monto
+#             total += monto
+#             print(f"✅ Compra realizada por ${monto}. Saldo restante: ${deuda}")
+#     except ValueError:
+#         print("❌ Debe ingresar solo números enteros.")
+
+# # Menú principal
+# while True:
+#     try:
+#         op = int(input('''
+#         ===== MENÚ PRINCIPAL =====
+#         1. Pago de tarjeta de crédito
+#         2. Simulación de compras
+#         3. Salir
+#         Seleccione una opción: '''))
+
+#         match op:
+#             case 1:
+#                 PagoCupo()
+#             case 2:
+#                 SimulacionDeCompra()
+#             case 3:
+#                 print("👋 Saliendo del programa...")
+#                 break
+#             case _:
+#                 print("❌ Opción inválida. Ingrese solo las opciones del menú.")
+#     except ValueError:
+#         print("❌ Error: Debe ingresar solo números enteros.")
+         
+        
+
+#menu de usuarios
+usuario1=None
+usuario2=None
+usuario3=None
+contraseña1=None
+contraseña2=None
+contraseña3=None
+
+def Usuarios():
+    global  usuario1,usuario2,usuario3,contraseña1,contraseña2,contraseña3
+
+    while True:
+        try:
+            opcion=int(input('''
+                    Resgistro de usuarios
+                1. Usuario 1
+                2. Usuario 2
+                3. Usuario 3
+                4. Salir                    
+                            '''))
+            match opcion:
+                case 1:
+                    try:
+                        usuario1=str(input("ingresar nombre de usuario "))
+                        contraseña1=int(input("ingresar contarseña (solo numeros enteros)"))
+                    except Exception:
+                        print("ingresar valores validos")
+                    print(f"nombre de usuario registrado {usuario1}")
+                case 2:
+                    try:
+                        usuario2=str(input("ingresar nombre de usuario "))
+                        contraseña2=int(input("ingresar contarseña (solo numeros enteros)"))
+                    except Exception:
+                        print("ingresar valores validos")
+                    print(f"nombre de usuario registrado {usuario2}")
+                case 3:
+                    try:
+                        usuario3=str(input("ingresar nombre de usuario "))
+                        contraseña3=int(input("ingresar contarseña (solo numeros enteros)"))
+                    except Exception:
+                        print("ingresar valores validos")
+                    print(f"nombre de usuario registrado {usuario3}")
+                case 4:
+                    print("Volviendo al menú principal...")
+                    break
+                case _:
+                    print("ingrese opcion valida")
+        except Exception:
+            print("ingrese solo numeros enteros")
+
+
+def InicioSesion():
+    global  usuario1,usuario2,usuario3,contraseña1,contraseña2,contraseña3
+    while True:
+        try:
+            if usuario1==None and usuario2==None and usuario3==None: 
+                print("debe registrar un usuario")
+                break
+            else:
+                
+                op=int(input('''
+                        1. Realizar llamada
+                        2. Enviar correo electronico
+                        3. salir 
+                                '''))
+                match op:
+                    case 1:
+                        print("Realizar llamada")
+                    case 2:
+                        print("Enviar correo electronico")
+                    case 3:
+                        print("saliendo...")
+                        break
+                    case _:
+                        input("debe ingresar opcion valida")
+        except Exception:
+                print("ingresar solo numeros enteros")
+
+
+
+def menu():
+    global  usuario1,usuario2,usuario3,contraseña1,contraseña2,contraseña3
+    try:
+        while True:
+            opciones=int(input('''
+                        1. Iniciar sesion
+                        2. registrar usuario
+                        3. salir
+                                '''))
+            match opciones:
+                case 1:
+                    InicioSesion()
+                case 2:
+                    Usuarios()
+                case 3:
+                    print("saliendo...")
+                    break
+                case _:
+                    print("ingresar opcion valida")
+    except Exception:
+        print("debe ingresar solo numeros enteros")
+
+menu()
