@@ -266,30 +266,58 @@ def Usuarios():
             print("ingrese solo numeros enteros")
 
 
+def ValidarSesion(usuario,contraseña):
+    return(
+        (usuario==usuario1 and contraseña==contraseña1)or
+        (usuario==usuario2 and contraseña==contraseña2)or
+        (usuario==usuario3 and contraseña==contraseña3)
+           )
+        
+
 def InicioSesion():
     global  usuario1,usuario2,usuario3,contraseña1,contraseña2,contraseña3
+
+
     while True:
         try:
             if usuario1==None and usuario2==None and usuario3==None: 
                 print("debe registrar un usuario")
                 break
             else:
-                
-                op=int(input('''
-                        1. Realizar llamada
-                        2. Enviar correo electronico
-                        3. salir 
-                                '''))
-                match op:
-                    case 1:
-                        print("Realizar llamada")
-                    case 2:
-                        print("Enviar correo electronico")
-                    case 3:
-                        print("saliendo...")
-                        break
-                    case _:
-                        input("debe ingresar opcion valida")
+                usuario=str(input("ingrese usuario:"))
+                contraseña=int(input("ingrese contraseña"))
+                if ValidarSesion(usuario,contraseña):
+                    print(f"bienvenido{usuario}")
+                    op=int(input('''
+                            1. Realizar llamada
+                            2. Enviar correo electronico
+                            3. salir 
+                                    '''))
+                    match op:
+                        case 1:
+                                celular = input("Ingrese número de celular (debe comenzar con 9 y tener 9 dígitos): ")
+                                if celular.startswith("9") and len(celular) == 9 and celular.isdigit():
+                                    print("Llamada realizada con éxito.")
+                                else:
+                                    print("Número inválido.")
+                        case 2:
+                            while True:
+                                correo=input("ingrese correo:")
+                                if "@" in correo:
+                                    break
+                                else:
+                                    print("el correo debe tener @ , intente nuevamente")
+                            mensaje=input("Ingrese mensaje a enviar:")
+                            print(f"Correo enviado a {correo} con mensaje: {mensaje}")
+                            
+                        case 3:
+                            print("saliendo...")
+                            break
+                        case _:
+                            input("debe ingresar opcion valida")
+                else:
+                    print("usuario o contraseña incorrectos")
+
         except Exception:
                 print("ingresar solo numeros enteros")
 
