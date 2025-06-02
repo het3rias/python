@@ -265,7 +265,6 @@ def Usuarios():
         except Exception:
             print("ingrese solo numeros enteros")
 
-
 def ValidarSesion(usuario,contraseña):
     return(
         (usuario==usuario1 and contraseña==contraseña1)or
@@ -273,13 +272,12 @@ def ValidarSesion(usuario,contraseña):
         (usuario==usuario3 and contraseña==contraseña3)
            )
         
-
 def InicioSesion():
     global  usuario1,usuario2,usuario3,contraseña1,contraseña2,contraseña3
 
 
     while True:
-        try:
+        try:                    
             if usuario1==None and usuario2==None and usuario3==None: 
                 print("debe registrar un usuario")
                 break
@@ -287,7 +285,19 @@ def InicioSesion():
                 usuario=str(input("ingrese usuario:"))
                 contraseña=int(input("ingrese contraseña"))
                 if ValidarSesion(usuario,contraseña):
-                    print(f"bienvenido{usuario}")
+                    print(f"bienvenido {usuario}")
+                    break
+                else:
+                    print("usuario o contraseña incorrectos")
+
+        except Exception:
+            print("ingresar valores correctamente")
+
+def MenuDeUsuario():
+    InicioSesion()
+    while True:
+        try:
+
                     op=int(input('''
                             1. Realizar llamada
                             2. Enviar correo electronico
@@ -311,38 +321,36 @@ def InicioSesion():
                             print(f"Correo enviado a {correo} con mensaje: {mensaje}")
                             
                         case 3:
-                            print("saliendo...")
+                            print("cerrando sesion... ")
                             break
                         case _:
                             input("debe ingresar opcion valida")
-                else:
-                    print("usuario o contraseña incorrectos")
+
 
         except Exception:
                 print("ingresar solo numeros enteros")
 
-
-
 def menu():
     global  usuario1,usuario2,usuario3,contraseña1,contraseña2,contraseña3
-    try:
-        while True:
-            opciones=int(input('''
-                        1. Iniciar sesion
-                        2. registrar usuario
-                        3. salir
-                                '''))
-            match opciones:
-                case 1:
-                    InicioSesion()
-                case 2:
-                    Usuarios()
-                case 3:
-                    print("saliendo...")
-                    break
-                case _:
-                    print("ingresar opcion valida")
-    except Exception:
-        print("debe ingresar solo numeros enteros")
+    while True:
+        try:
+            
+                opciones=int(input('''
+                            1. Iniciar sesion
+                            2. registrar usuario
+                            3. salir
+                                    '''))
+                match opciones:
+                    case 1:
+                        MenuDeUsuario()
+                    case 2:
+                        Usuarios()
+                    case 3:
+                        print("saliendo...")
+                        break
+                    case _:
+                        print("ingresar opcion valida")
+        except Exception:
+            print("debe ingresar solo numeros enteros")
 
 menu()
