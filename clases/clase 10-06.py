@@ -69,7 +69,7 @@ carrito=[]
 def MostrarProductos():
     print("Productos disponibles")
     for i in range(len(productos)):
-        print(f"{i+1}.-{productos[i]} - ${precios} ")
+        print(f"{i+1}.-{productos[i]} - ${precios[i]} ")
 
 def IngresarProducto():
     producto=input("ingresar nombre del producto")
@@ -89,9 +89,16 @@ def Compra():
         print("opcion fuera de rango")
 
 def Boltea():
-
-
-
+    if not carrito:
+        print("El carrito esta vacio")
+        return
+    print((" BOLETA"))
+    total=0
+    for i in carrito:
+        print(f"{productos[i]} - ${precios[i]}")
+        total +=precios[i]
+    print(f"Total a pagar: ${total}")
+    print("Gracias por su compra")
 
 
 while True:
