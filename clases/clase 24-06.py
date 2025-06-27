@@ -64,7 +64,7 @@ def validanombre(nombre):
     else:
         return False
     
-def act_perros(dict):
+def actualizar(dict):
     Muestra_Juegos(dict)
     act=int(input("Seleccione el juego a actulizar?: "))
     while True:
@@ -126,7 +126,7 @@ while True:
         case 3:
             Borrar(juegos)
         case 4:
-            print("")
+            actualizar(juegos)
         case 5:
             print("saliendo..")
             break
