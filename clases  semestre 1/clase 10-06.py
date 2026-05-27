@@ -72,8 +72,8 @@ def MostrarProductos():
         print(f"{i+1}.-{productos[i]} - ${precios[i]} ")
 
 def IngresarProducto():
-    producto=input("ingresar nombre del producto")
-    precio=int(input("ingresar precio del producto"))
+    producto=input("ingresar nombre del producto: ")
+    precio=int(input("ingresar precio del producto: "))
     productos.append(producto)
     precios.append(precio)
     print(f"el producto {producto} fue ingresado con exito")
