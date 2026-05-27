@@ -1,3 +1,15 @@
+# Secuencia Fibonacci pequeña
+def fibonacci(n):
+    """Genera una secuencia Fibonacci de n términos"""
+    fib_sequence = [0, 1]
+    for i in range(2, n):
+        fib_sequence.append(fib_sequence[i-1] + fib_sequence[i-2])
+    return fib_sequence[:n]
+
+# Ejemplo de uso
+print("Secuencia Fibonacci (primeros 10 números):")
+print(fibonacci(10))
+
 # uso  y ejemplo de lista
 # numeros=[7,5,33,24,1]
 #      0 1 2  3  4 
